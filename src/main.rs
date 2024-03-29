@@ -17,18 +17,19 @@ fn contains_target_at(value: [i8; 5], target: i8) -> bool {
 
 
 
-fn contains_pars_at(value: [i8; 5], target: i8) -> bool {
+    fn contains_pars_at(value: [i8; 5], target: i8) -> i8 {
     let mut contador:i8 = 0;
-    let mut apareceu: bool  = false;
+    
     for pegar_valor in value.iter(){
         if *pegar_valor == target{
-                contador += 1;
                 if contador > 1 {
-                     apareceu = true;
+                       contador += 1;
+
+                     
                 }
             }
         }
-    apareceu
+        return contador
     }
     
 
@@ -58,8 +59,9 @@ mod tests {
     //nenhum numero repetido o programa passa
     #[test]
     fn test_contains_pars_at(){
-        let list = [1,2,3,4,4];
-        assert_eq!(true,contains_pars_at(list,2))
+        let list = [1,2,3,4,5];
+        let target = 0;
+        assert_eq!(0,contains_pars_at(list,target))
     }
 
 }
