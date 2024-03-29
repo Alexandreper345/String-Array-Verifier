@@ -17,14 +17,18 @@ fn contains_target_at(value: [i8; 5], target: i8) -> bool {
 
 
 
-fn contains_pars_at(value: [i8; 5], target: i8) -> i8 {
+fn contains_pars_at(value: [i8; 5], target: i8) -> bool {
     let mut contador:i8 = 0;
+    let mut apareceu: bool  = false;
     for pegar_valor in value.iter(){
         if *pegar_valor == target{
-                contador += 1
+                contador += 1;
+                if contador > 1 {
+                     apareceu = true;
+                }
             }
         }
-   return  contador
+    apareceu
     }
     
 
@@ -49,11 +53,13 @@ mod tests {
         assert!(contains_target_at(array,target))
     }
 
-     #[test]
+
+    //caso o tenha um numero repetido a tedencia é que o programa não passa,senão se não tiver
+    //nenhum numero repetido o programa passa
+    #[test]
     fn test_contains_pars_at(){
-        let list = [1,2,3,3,3];
-        let target = 3;
-        assert_eq!(3,contains_pars_at(list,target))
+        let list = [1,2,3,4,4];
+        assert_eq!(true,contains_pars_at(list,2))
     }
 
 }
