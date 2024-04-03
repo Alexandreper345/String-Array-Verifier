@@ -5,3 +5,7 @@ version = 3
 [[package]]
 name = "exercicios"
 version = "0.1.0"
+
+[[package]]
+name = "par"
+version = "0.1.0"
