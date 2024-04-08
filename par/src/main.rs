@@ -6,7 +6,7 @@ fn is_vetor_par(value: [i8; 5]) -> HashMap<i8,u8>{
     // negativos e criando uma instacia para chaves e valores   
     let mut contador: HashMap<i8,u8> = HashMap::new();
     
-    //iteramos sobre os elementos
+    //iteramos sobre os elementos da array e atualizamos o contador a cada elemento
     for num in value.iter(){
         *contador.entry(*num).or_insert(0)+=1;
 
