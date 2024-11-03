@@ -1,0 +1,1 @@
+Projeto em Rust para verificação de palíndromos e presença de elementos em arrays, com funções que identificam palíndromos, verificam a presença de valores específicos e detectam pares, além de testes automatizados para validar o comportamento.
