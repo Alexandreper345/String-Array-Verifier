@@ -44,7 +44,7 @@ mod tests
 	#[test]
 	fn test_in_palindrome()
 	{
-			assert!(is_a_palindrome("alala"));
+		assert!(is_a_palindrome("alala"));
 	}
 
 	#[test]
