@@ -47,7 +47,7 @@ mod tests
 			assert!(is_a_palindrome("alala"));
 	}
 
-  #[test]
+	#[test]
 	fn test_contains_target_at()
 	{
 		let array = [1,2,2,4,5];
